@@ -30,7 +30,7 @@ The tool supports the following command line options
 ```
 $ wayback --help 
 
-Fetch all endpoints for a domain from the wayback machine
+Fetch URLs for a domain from the wayback machine
 
 Usage: wayback [OPTIONS] <domains>...
 
@@ -39,7 +39,7 @@ Arguments:
 
 Options:
   -o, --outfile <outfile>  File to save output to
-  -s, --subdomains         Enumerate subdomains as well
+      --no-subs            Do not enumerate subdomains for the given domain
   -j, --json               Save output as JSON file
   -h, --help               Print help
 ```

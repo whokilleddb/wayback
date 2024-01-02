@@ -38,7 +38,7 @@ async fn main() {
                     domain.italic().yellow()
                 );
                 let mut url_data = UrlData::new(domain);
-                url_data.fetch(cli_opts.subdomains);
+                url_data.fetch(cli_opts.nosubs);
                 url_data
             })
         })

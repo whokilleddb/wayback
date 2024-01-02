@@ -5,7 +5,7 @@ use std::path::PathBuf;
 pub struct CliOpts {
     pub domains: Vec<String>,     // Domain name to scrape
     pub outfile: Option<PathBuf>, // Output file to write results to
-    pub subdomains: bool,         // Use subdomains
+    pub nosubs: bool,             // Do not use subdomains
     pub json: bool,               // Use JSON flags
 }
 
@@ -27,10 +27,9 @@ impl CliOpts {
                     .help("File to save output to"),
             )
             .arg(
-                Arg::new("subdomains")
-                    .short('s')
-                    .long("subdomains")
-                    .help("Enumerate subdomains as well")
+                Arg::new("nosubs")
+                    .long("no-subs")
+                    .help("Do not enumerate subdomains for the given domain")
                     .action(ArgAction::SetTrue),
             )
             .arg(
@@ -55,7 +54,7 @@ impl CliOpts {
             None => None,
         };
 
-        let subdomains: bool = match cli_opts.get_one::<bool>("subdomains") {
+        let nosubs: bool = match cli_opts.get_one::<bool>("nosubs") {
             Some(v) => *v,
             None => false,
         };
@@ -68,7 +67,7 @@ impl CliOpts {
         Self {
             domains,
             outfile,
-            subdomains,
+            nosubs,
             json,
         }
     }

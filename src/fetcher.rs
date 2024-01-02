@@ -33,14 +33,14 @@ impl UrlData {
         }
     }
 
-    pub fn fetch(&mut self, use_subdomain: bool) {
+    pub fn fetch(&mut self, no_subs: bool) {
         let dt = Local::now();
         let mut ctx: Context = Context::new();
 
         // URL to fetch data from
-        let url = match use_subdomain {
-            true => format!("http://web.archive.org/cdx/search/cdx?url=*.{}/*&output=text&fl=original&collapse=urlkey", self.domain_name),
-            false => format!("http://web.archive.org/cdx/search/cdx?url={}/*&output=text&fl=original&collapse=urlkey", self.domain_name)
+        let url = match no_subs {
+            false => format!("http://web.archive.org/cdx/search/cdx?url=*.{}/*&output=text&fl=original&collapse=urlkey", self.domain_name),
+            true => format!("http://web.archive.org/cdx/search/cdx?url={}/*&output=text&fl=original&collapse=urlkey", self.domain_name)
         };
 
         // Headers to send
