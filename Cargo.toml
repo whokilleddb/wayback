@@ -1,5 +1,5 @@
 [package]
-name = "wayback"
+name = "way_back"
 version = "0.1.0"
 edition = "2021"
 authors = ["DB <whokilleddb@protonmail.com>"]
