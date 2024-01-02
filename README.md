@@ -1,7 +1,27 @@
 # Wayback 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whokilleddb)
 
-A multithreaded approach to fetching URLs from the wayback machine! 
+A multithreaded approach to fetching URLs from the wayback machine! A more _rusty_ version of [tomnomnom/waybackurls](https://github.com/tomnomnom/waybackurls).
+
+## Installation
+
+### From crates.io
+
+You can directly fetch the binary from `crates.io` with:
+
+```
+cargo install way_back
+```
+
+### From Source
+
+You can also install it directly from source with:
+
+```
+git clone https://github.com/whokilleddb/wayback
+cd wayback
+cargo build --release
+```
 
 ## Command Line Arguments
 

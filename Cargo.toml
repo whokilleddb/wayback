@@ -1,6 +1,6 @@
 [package]
 name = "way_back"
-version = "0.1.0"
+version = "1.1.0"
 edition = "2021"
 authors = ["DB <whokilleddb@protonmail.com>"]
 license = "MIT"
@@ -12,6 +12,10 @@ keywords = ["wayback", "subdomain", "machine", "bugbounty"]
 categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "wayback"
+path = "src/main.rs"
 
 [dependencies]
 clap = "4.4.12"
