@@ -2,6 +2,14 @@
 name = "wayback"
 version = "0.1.0"
 edition = "2021"
+authors = ["DB <whokilleddb@protonmail.com>"]
+license = "MIT"
+description = " A command line tool to scrape targets from the Wayback Machine"
+readme = "README.md"
+homepage = "https://github.com/whokilleddb/wayback"
+repository = "https://github.com/whokilleddb/wayback"
+keywords = ["wayback", "subdomain", "machine", "bugbounty"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -14,3 +22,4 @@ serde = { version = "1.0", features = ["derive"] }
 md5 = "0.7.0"
 chrono = "0.4.31"
 jsonxf = "1.1"
+colored = "2.1.0"
